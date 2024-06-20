@@ -37,7 +37,7 @@ document.getElementById('enviar').addEventListener("click", function() {
             doc.text(`- ${peca}`, 10, yOffset + (index * 10));
         });
 
-        doc.text(`VALOR: ${valor}`, 10, yOffset + pecasList.length * 10 + 10);
+        doc.text(`VALOR R$: ${valor}`, 10, yOffset + pecasList.length * 10 + 10);
         doc.text(`DATA: ${data}`, 10, yOffset + pecasList.length * 10 + 20);
 
         // Salva o PDF com um nome específico
