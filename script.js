@@ -6,6 +6,13 @@ document.getElementById('enviar').addEventListener("click", function() {
     const valor = document.getElementById("valor").value;
     const data = document.getElementById("data").value;
 
+    function formatDate(date) {
+        const [year, month, day] = date.split('-');
+        return `${day}/${month}/${year}`;
+    }
+
+    const formattedDate = formatDate(data);
+
     // Verifica se jsPDF está carregado corretamente
     if (window.jspdf) {
         const { jsPDF } = window.jspdf;
@@ -38,7 +45,8 @@ document.getElementById('enviar').addEventListener("click", function() {
         });
 
         doc.text(`VALOR R$: ${valor}`, 10, yOffset + pecasList.length * 10 + 10);
-        doc.text(`DATA: ${data}`, 10, yOffset + pecasList.length * 10 + 20);
+
+        doc.text(`DATA: ${formattedDate}`, 10, yOffset + pecasList.length * 10 + 20);
 
         // Salva o PDF com um nome específico
         doc.save(`${nome}`);
