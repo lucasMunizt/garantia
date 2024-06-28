@@ -20,17 +20,17 @@ document.getElementById('enviar').addEventListener("click", function() {
 
         doc.setFont("helvetica");
         doc.setFontSize(12);
-       /* const imgUrl = './logo1.jpeg'
+        const imgUrl = './logobranco.jpg'
         const imgX = 10;
         const imgY = 10;
-        const imgWidth = 50;
-        const imgHeight = 50;
-        doc.addImage(imgUrl, 'JPEG', imgX, imgY, imgWidth, imgHeight);*/
+        const imgWidth = 20;
+        const imgHeight = 20;
+        doc.addImage(imgUrl, 'JPEG', imgX, imgY, imgWidth, imgHeight);
         // Define o texto em negrito
         doc.setFont("helvetica","bold");
-        doc.text("CLV - ASSISTÊNCIA TÉCNICA EM ELETRODOMÉSTICOS", 10, 10);
-        doc.text("TADEU BRITO TELES CNPJ:40.034.250/0001-67", 10, 20);
-        doc.text("GARANTIA DO SERVIÇO - 90 DIAS A CONTAR A PARTIR DA ENTREGA", 10, 30);
+        doc.text("CLV - ASSISTÊNCIA TÉCNICA EM ELETRODOMÉSTICOS", 35, 10);
+        doc.text("TADEU BRITO TELES CNPJ:40.034.250/0001-67", 35, 20);
+        doc.text("GARANTIA DO SERVIÇO - 90 DIAS A CONTAR A PARTIR DA ENTREGA", 35, 30);
 
         doc.text(`OS: ${os}`, 10, 50);
         doc.text(`CLIENTE - ${nome}`, 10, 60);
